@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lvl404:~$ terminal interface</title>
+    <link rel="stylesheet" href="terminal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">lvl404@experiment:~$ | 404@lvl404.com</div>
+        </div>
+
+        <!-- Terminal Content -->
+        <div class="terminal-content" id="terminal">
+            <!-- Boot sequence -->
+            <div class="boot-sequence">
+                <div class="boot-line">lvl404 Terminal v4.04 - Experimental Build</div>
+                <div class="boot-line">Loading digital void...</div>
+                <div class="boot-line">Initializing glitch protocols...</div>
+                <div class="boot-line">Connecting to level 404...</div>
+                <div class="boot-line success">Connection established.</div>
+                <div class="boot-line">Welcome to the secret level.</div>
+                <br>
+            </div>
+
+            <!-- ASCII Art Logo -->
+            <div class="ascii-logo">
+<pre>
+██╗     ██╗   ██╗██╗██╗  ██╗ ██████╗ ██╗  ██╗
+██║     ██║   ██║██║██║  ██║██╔═████╗██║  ██║
+██║     ██║   ██║██║███████║██║██╔██║███████║
+██║     ╚██╗ ██╔╝██║╚════██║████╔╝██║╚════██║
+███████╗ ╚████╔╝ ██║     ██║╚██████╔╝     ██║
+╚══════╝  ╚═══╝  ╚═╝     ╚═╝ ╚═════╝      ╚═╝
+</pre>
+            </div>
+
+            <!-- Welcome Message -->
+            <div class="welcome-msg">
+                <div class="glitch-text">NOT FOUND? WE'LL MAKE IT.</div>
+                <div class="subtitle">Secret level that "doesn't exist", but that's where the boldest ideas are born</div>
+                <div class="contact-info">Contact: <span class="terminal-link">404@lvl404.com</span></div>
+                <br>
+                <div class="help-text">Type 'help' to see available commands or 'ls' to explore the void</div>
+                <br>
+            </div>
+
+            <!-- Terminal Output -->
+            <div id="output"></div>
+
+            <!-- Input Line -->
+            <div class="input-line">
+                <span class="prompt">user@lvl404:~$ </span>
+                <input type="text" id="commandInput" class="command-input" autocomplete="off" spellcheck="false">
+                <span class="cursor">█</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden content for commands -->
+    <div id="hidden-content" style="display: none;">
+        <!-- About content -->
+        <div id="about-content">
+            <div class="section-header">== ABOUT.TXT ==</div>
+            <div class="file-content">
+lvl404 — studio of our own experiments.
+
+We create projects for Generation Z, test new formats 
+and turn errors into new levels. There are no orders 
+here — only ideas that we want to live through ourselves.
+
+PHILOSOPHY:
+If it's not found, we'll make it. We experiment with 
+memes, absurdity and irony. Every glitch becomes a 
+feature, every error becomes an innovation.
+
+STATS:
+- Experiments launched: 404
+- Memes created: 100  
+- Possibilities: ∞
+            </div>
+        </div>
+
+        <!-- Experiments content -->
+        <div id="experiments-content">
+            <div class="section-header">== EXPERIMENTS/ ==</div>
+            <div class="file-listing">
+drwxr-xr-x  3 user lvl404  4096 Dec 25 04:04 ./
+drwxr-xr-x  5 user lvl404  4096 Dec 25 04:04 ../
+-rw-r--r--  1 user lvl404  2048 Dec 25 04:04 sitch.lol
+-rw-r--r--  1 user lvl404  1024 Dec 25 04:04 merch.txt
+-rw-r--r--  1 user lvl404   512 Dec 25 04:04 secret_project_x.???
+
+Total: 3 experiments
+            </div>
+        </div>
+
+        <!-- Sitch content -->
+        <div id="sitch-content">
+            <div class="section-header">== SITCH.LOL ==</div>
+            <div class="file-content">
+EXPERIMENT #1: sitch.lol
+STATUS: [LIVE] 🟢
+
+Social meme-experiment about situations, absurdity 
+and Gen Z irony.
+
+A digital playground where everyday situations become 
+memes, and memes become culture. We capture the absurd 
+moments that define our generation.
+
+LAUNCH: https://sitch.lol
+ACCESS: Type 'open sitch' to visit
+            </div>
+        </div>
+
+        <!-- Merch content -->
+        <div id="merch-content">
+            <div class="section-header">== MERCH.TXT ==</div>
+            <div class="file-content">
+EXPERIMENT #2: lvl404 merch
+STATUS: [SOON] 🟡
+
+Clothing and accessories in glitch-style for digital natives.
+
+Wearable glitches. Fashion that speaks the language of 
+errors and innovations. Every piece tells a story of 
+digital rebellion.
+
+ITEMS:
+- Glitch hoodies
+- Error message tees  
+- 404 accessories
+- Digital void caps
+
+RELEASE: Coming soon...
+            </div>
+        </div>
+
+        <!-- Secret content -->
+        <div id="secret-content">
+            <div class="section-header">== SECRET_PROJECT_X.??? ==</div>
+            <div class="file-content">
+EXPERIMENT #X: secret project_x
+STATUS: [???] 🔴
+
+level not found yet...
+
+ERROR 404: Content not accessible
+PERMISSION DENIED
+
+[DATA CORRUPTED]
+[CLASSIFIED]
+[LEVEL LOCKED]
+
+Try again later... or maybe never.
+            </div>
+        </div>
+
+        <!-- Contact content -->
+        <div id="contact-content">
+            <div class="section-header">== CONTACT.SH ==</div>
+            <div class="file-content">
+#!/bin/bash
+# Contact script for lvl404
+
+echo "We don't take clients. We take ideas."
+echo ""
+echo "EMAIL: 404@lvl404.com"
+echo ""
+echo "PHILOSOPHY:"
+echo "We don't have orders. lvl404 is a space for experiments."
+echo "If you have a crazy idea that's impossible to implement — write to us."
+echo ""
+echo "CONNECT:"
+echo "Email: 404@lvl404.com"
+echo "Discord: lvl404#0000"
+echo "Telegram: @lvl404"  
+echo "TikTok: @lvl404"
+echo ""
+echo "LOCATION:"
+echo "Somewhere in the digital void"
+echo "Level 404, Sector Z"
+echo ""
+echo "Type 'send-idea' to submit your crazy idea"
+            </div>
+        </div>
+    </div>
+
+    <script src="terminal.js"></script>
+</body>
+</html>
+
