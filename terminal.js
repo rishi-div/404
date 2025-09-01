@@ -37,6 +37,7 @@ class Terminal {
             'send-idea': this.sendIdea.bind(this),
             'email': this.showEmail.bind(this),
             'contact': this.showContact.bind(this),
+            'company': this.showCompany.bind(this),
             'hack': this.hack.bind(this),
             'matrix': this.matrix.bind(this),
             'glitch': this.glitch.bind(this),
@@ -140,6 +141,7 @@ class Terminal {
 <span class="command-suggestion">open [link]</span> - open external links
 <span class="command-suggestion">email</span>       - show email contact
 <span class="command-suggestion">contact</span>     - show full contact info
+<span class="command-suggestion">company</span>     - show company information
 <span class="command-suggestion">send-idea</span>   - submit your crazy idea
 
 SPECIAL COMMANDS:
@@ -151,6 +153,7 @@ SPECIAL COMMANDS:
 QUICK START:
 Try: <span class="terminal-link">ls</span> then <span class="terminal-link">cat about.txt</span>
 Contact: <span class="terminal-link">email</span> or <span class="terminal-link">contact</span>
+Company: <span class="terminal-link">company</span>
 </div>`;
         this.addOutput(helpText);
     }
@@ -302,6 +305,15 @@ Contact: <span class="terminal-link">email</span> or <span class="terminal-link"
         if (hiddenElement) {
             this.addOutput(hiddenElement.innerHTML);
         }
+    }
+    
+    showCompany() {
+        this.addOutput(`<div class="section-header">== COMPANY INFO ==</div>`);
+        this.addOutput(`<div class="success">🏢 COMPANY: Lvl404 Inc.</div>`);
+        this.addOutput(`<div class="info">📍 ADDRESS:</div>`);
+        this.addOutput(`<div class="file-content">2261 Market Street STE 86710<br>San Francisco, CA 94114</div>`);
+        this.addOutput(`<div class="terminal-link">📧 Contact: 404@lvl404.com</div>`);
+        this.addOutput(`<div class="warning">We don't take clients. We take ideas.</div>`);
     }
     
     hack() {
